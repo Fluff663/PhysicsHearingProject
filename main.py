@@ -227,7 +227,7 @@ print("Please wait while we write results to database")
 import pyodbc
 conn = pyodbc.connect('Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=.\data.accdb;')
 cursor = conn.cursor()
-cursor.execute('INSERT INTO data (userpref, f500hz, f1000hz, f2000hz, f4000hz, f6000hz, f8000hz, f10000hz, f12000hz, f14000hz, f16000hz, f18000hz, f20000hz) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', buserpref, b500hz, b1000hz, b2000hz, b4000hz, b6000hz, b8000hz, b10000hz, b12000hz, b14000hz, b16000hz, b18000hz, b20000hz)
+cursor.execute('INSERT INTO data (userprefrap, f500hz, f1000hz, f2000hz, f4000hz, f6000hz, f8000hz, f10000hz, f12000hz, f14000hz, f16000hz, f18000hz, f20000hz) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)', buserpref, b500hz, b1000hz, b2000hz, b4000hz, b6000hz, b8000hz, b10000hz, b12000hz, b14000hz, b16000hz, b18000hz, b20000hz)
 conn.commit()
 conn.close()
 print("Results written to database")
