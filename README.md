@@ -1,3 +1,2 @@
 # PhysicsHearingProject
 A hearing test project to collect data for my physics class
-All data in this git repo is from testing
