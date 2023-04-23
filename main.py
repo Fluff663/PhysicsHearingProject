@@ -136,7 +136,7 @@ sine_tone(
 f16000hz = input("Did You hear the tone? Y/N")
 sine_tone(
     # see http://www.phy.mtu.edu/~suits/notefreqs.html
-    frequency=18000.00, # Hz, waves per second A4
+    frequency=18000.0, # Hz, waves per second A4
     duration=3, # seconds to play sound
     volume=1, # 0..1 how loud it is
     # see http://en.wikipedia.org/wiki/Bit_rate#Audio
@@ -145,7 +145,7 @@ sine_tone(
 f18000hz = input("Did You hear the tone? Y/N")
 sine_tone(
     # see http://www.phy.mtu.edu/~suits/notefreqs.html
-    frequency=20000.00, # Hz, waves per second A4
+    frequency=20000.0, # Hz, waves per second A4
     duration=3, # seconds to play sound
     volume=1, # 0..1 how loud it is
     # see http://en.wikipedia.org/wiki/Bit_rate#Audio
