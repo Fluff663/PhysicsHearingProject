@@ -34,57 +34,57 @@ winsound.Beep(18000, 1000)  # Beep at 1000 Hz for 100 ms
 f18000hz = input("Did You hear the tone? Y/N")
 winsound.Beep(20000, 1000)  # Beep at 1000 Hz for 100 ms
 f20000hz = input("Did You hear the tone? Y/N")
-if userpref == "y":
+if userpref == "y" or "Y":
     buserpref = True
-if userpref == "n":
+if userpref == "n" or "N":
     buserpref = False
-if f500hz == "y":
+if f500hz == "y" or "Y":
     b500hz = True
-if f500hz == "n":
+if f500hz == "n" or "N":
     b500hz = False
-if f1000hz == "y":
+if f1000hz == "y" or "Y":
     b1000hz = True
-if f1000hz == "n":
+if f1000hz == "n" or "N":
     b1000hz = False
-if f2000hz == "y":
+if f2000hz == "y" or "Y":
     b2000hz = True
-if f2000hz == "n":
+if f2000hz == "n" or "N":
     b2000hz = False
-if f4000hz == "y":
+if f4000hz == "y" or "Y":
     b4000hz = True
-if f4000hz == "n":
+if f4000hz == "n" or "N":
     b4000hz = False
-if f6000hz == "y":
+if f6000hz == "y" or "Y":
     b6000hz = True
-if f6000hz == "n":
+if f6000hz == "n" or "N":
     b6000hz = False
-if f8000hz == "y":
+if f8000hz == "y" or "Y":
     b8000hz = True
-if f8000hz == "n":
+if f8000hz == "n" or "N":
     b8000hz = False
-if f10000hz == "y":
+if f10000hz == "y" or "Y":
     b10000hz = True
-if f10000hz == "n":
+if f10000hz == "n" or "N":
     b10000hz = False
-if f12000hz == "y":
+if f12000hz == "y" or "Y":
     b12000hz = True
-if f12000hz == "n":
+if f12000hz == "n" or "N":
     b12000hz = False
-if f14000hz == "y":
+if f14000hz == "y" or "Y":
     b14000hz = True
-if f14000hz == "n":
+if f14000hz == "n" or "N":
     b14000hz = False
-if f16000hz == "y":
+if f16000hz == "y" or "Y":
     b16000hz = True
-if f16000hz == "n":
+if f16000hz == "n" or "N":
     b16000hz = False
-if f18000hz == "y":
+if f18000hz == "y" or "Y":
     b18000hz = True
-if f18000hz == "n":
+if f18000hz == "n" or "N":
     b18000hz = False
-if f20000hz == "y":
+if f20000hz == "y" or "Y":
     b20000hz = True
-if f20000hz == "n":
+if f20000hz == "n" or "N":
     b20000hz = False
 try:
     buserpref
