@@ -9,6 +9,8 @@ conn_str = (r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
             r'DBQ=.\data.accdb;')
 conn = pyodbc.connect(conn_str)
 
+print("Please use lowercase y or n in all responses")
+
 userpref = input("Do you like rap? Y/N")
 winsound.Beep(500, 1000)  # Beep at 1000 Hz for 100 ms
 f500hz = input("Did You hear the tone? Y/N")
