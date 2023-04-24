@@ -2,155 +2,37 @@
 
 from __future__ import division
 import pyodbc
-import math
-from pyaudio import PyAudio
+import winsound
 
 #inits pyodbc to access data.accdb
 conn_str = (r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
             r'DBQ=.\data.accdb;')
 conn = pyodbc.connect(conn_str)
 
-print('yeetus deletus')
-
-#defines func for sine wave
-
-try:
-    from itertools import izip
-except ImportError: # Python 3
-    izip = zip
-    xrange = range
-
-def sine_tone(frequency, duration, volume=1, sample_rate=22050):
-    n_samples = int(sample_rate * duration)
-    restframes = n_samples % sample_rate
-
-    p = PyAudio()
-    stream = p.open(format=p.get_format_from_width(1), # 8bit
-                    channels=1, # mono
-                    rate=sample_rate,
-                    output=True)
-    s = lambda t: volume * math.sin(2 * math.pi * frequency * t / sample_rate)
-    samples = (int(s(t) * 0x7f + 0x80) for t in xrange(n_samples))
-    for buf in izip(*[samples]*sample_rate): # write several samples at a time
-        stream.write(bytes(bytearray(buf)))
-
-    # fill remainder of frameset with silence
-    stream.write(b'\x80' * restframes)
-
-    stream.stop_stream()
-    stream.close()
-    p.terminate()
-
-#print("end_sine")
-
 userpref = input("Do you like rap? Y/N")
-sine_tone(
-    # see http://www.phy.mtu.edu/~suits/notefreqs.html
-    frequency=500.00, # Hz, waves per second A4
-    duration=3, # seconds to play sound
-    volume=1, # 0..1 how loud it is
-    # see http://en.wikipedia.org/wiki/Bit_rate#Audio
-    sample_rate=22050 # number of samples per second
-    )
+winsound.Beep(500, 1000)  # Beep at 1000 Hz for 100 ms
 f500hz = input("Did You hear the tone? Y/N")
-sine_tone(
-    # see http://www.phy.mtu.edu/~suits/notefreqs.html
-    frequency=1000.00, # Hz, waves per second A4
-    duration=3, # seconds to play sound
-    volume=1, # 0..1 how loud it is
-    # see http://en.wikipedia.org/wiki/Bit_rate#Audio
-    sample_rate=22050 # number of samples per second
-    )
+winsound.Beep(1000, 1000)  # Beep at 1000 Hz for 100 ms
 f1000hz = input("Did You hear the tone? Y/N")
-sine_tone(
-    # see http://www.phy.mtu.edu/~suits/notefreqs.html
-    frequency=2000.00, # Hz, waves per second A4
-    duration=3, # seconds to play sound
-    volume=1, # 0..1 how loud it is
-    # see http://en.wikipedia.org/wiki/Bit_rate#Audio
-    sample_rate=22050 # number of samples per second
-    )
+winsound.Beep(2000, 1000)  # Beep at 1000 Hz for 100 ms
 f2000hz = input("Did You hear the tone? Y/N")
-sine_tone(
-    # see http://www.phy.mtu.edu/~suits/notefreqs.html
-    frequency=4000.00, # Hz, waves per second A4
-    duration=3, # seconds to play sound
-    volume=1, # 0..1 how loud it is
-    # see http://en.wikipedia.org/wiki/Bit_rate#Audio
-    sample_rate=22050 # number of samples per second
-    )
+winsound.Beep(4000, 1000)  # Beep at 1000 Hz for 100 ms
 f4000hz = input("Did You hear the tone? Y/N")
-sine_tone(
-    # see http://www.phy.mtu.edu/~suits/notefreqs.html
-    frequency=6000.00, # Hz, waves per second A4
-    duration=3, # seconds to play sound
-    volume=1, # 0..1 how loud it is
-    # see http://en.wikipedia.org/wiki/Bit_rate#Audio
-    sample_rate=22050 # number of samples per second
-    )
+winsound.Beep(6000, 1000)  # Beep at 1000 Hz for 100 ms
 f6000hz = input("Did You hear the tone? Y/N")
-sine_tone(
-    # see http://www.phy.mtu.edu/~suits/notefreqs.html
-    frequency=8000.00, # Hz, waves per second A4
-    duration=3, # seconds to play sound
-    volume=1, # 0..1 how loud it is
-    # see http://en.wikipedia.org/wiki/Bit_rate#Audio
-    sample_rate=22050 # number of samples per second
-    )
+winsound.Beep(8000, 1000)  # Beep at 1000 Hz for 100 ms
 f8000hz = input("Did You hear the tone? Y/N")
-sine_tone(
-    # see http://www.phy.mtu.edu/~suits/notefreqs.html
-    frequency=10000.00, # Hz, waves per second A4
-    duration=3, # seconds to play sound
-    volume=1, # 0..1 how loud it is
-    # see http://en.wikipedia.org/wiki/Bit_rate#Audio
-    sample_rate=22050 # number of samples per second
-    )
+winsound.Beep(10000, 1000)  # Beep at 1000 Hz for 100 ms
 f10000hz = input("Did You hear the tone? Y/N")
-sine_tone(
-    # see http://www.phy.mtu.edu/~suits/notefreqs.html
-    frequency=12000.00, # Hz, waves per second A4
-    duration=3, # seconds to play sound
-    volume=1, # 0..1 how loud it is
-    # see http://en.wikipedia.org/wiki/Bit_rate#Audio
-    sample_rate=22050 # number of samples per second
-    )
+winsound.Beep(12000, 1000)  # Beep at 1000 Hz for 100 ms
 f12000hz = input("Did You hear the tone? Y/N")
-sine_tone(
-    # see http://www.phy.mtu.edu/~suits/notefreqs.html
-    frequency=14000.00, # Hz, waves per second A4
-    duration=3, # seconds to play sound
-    volume=1, # 0..1 how loud it is
-    # see http://en.wikipedia.org/wiki/Bit_rate#Audio
-    sample_rate=22050 # number of samples per second
-    )
+winsound.Beep(14000, 1000)  # Beep at 1000 Hz for 100 ms
 f14000hz = input("Did You hear the tone? Y/N")
-sine_tone(
-    # see http://www.phy.mtu.edu/~suits/notefreqs.html
-    frequency=16000.00, # Hz, waves per second A4
-    duration=3, # seconds to play sound
-    volume=1, # 0..1 how loud it is
-    # see http://en.wikipedia.org/wiki/Bit_rate#Audio
-    sample_rate=22050 # number of samples per second
-    )
+winsound.Beep(16000, 1000)  # Beep at 1000 Hz for 100 ms
 f16000hz = input("Did You hear the tone? Y/N")
-sine_tone(
-    # see http://www.phy.mtu.edu/~suits/notefreqs.html
-    frequency=18000.0, # Hz, waves per second A4
-    duration=3, # seconds to play sound
-    volume=1, # 0..1 how loud it is
-    # see http://en.wikipedia.org/wiki/Bit_rate#Audio
-    sample_rate=22050 # number of samples per second
-    )
+winsound.Beep(18000, 1000)  # Beep at 1000 Hz for 100 ms
 f18000hz = input("Did You hear the tone? Y/N")
-sine_tone(
-    # see http://www.phy.mtu.edu/~suits/notefreqs.html
-    frequency=20000.0, # Hz, waves per second A4
-    duration=3, # seconds to play sound
-    volume=1, # 0..1 how loud it is
-    # see http://en.wikipedia.org/wiki/Bit_rate#Audio
-    sample_rate=22050 # number of samples per second
-    )
+winsound.Beep(20000, 1000)  # Beep at 1000 Hz for 100 ms
 f20000hz = input("Did You hear the tone? Y/N")
 if userpref == "y":
     buserpref = True
