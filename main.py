@@ -104,7 +104,6 @@ try:
 except NameError:
     print("Please use a single y/n for all responses")
     exit()
-print("Run Success!")
 print("Please wait while we write results to database")
 #Code to write to data.accdb
 import pyodbc
