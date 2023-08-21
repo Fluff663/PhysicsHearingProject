@@ -1,6 +1,5 @@
 #gathers hearing range data 500-1000-2000-4000-6000-8000-10000-15000-16000-180000-20000 hz and writes to data.accdb
 
-from __future__ import division
 import pyodbc
 import winsound
 
